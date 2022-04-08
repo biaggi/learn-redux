@@ -25,12 +25,10 @@ const actionSet = value => {
 
 const actionDeferred = lastValue => {
   return dispatch => {
-    dispatch(actionIncremented())
-    dispatch(actionIncremented())
-    dispatch(actionIncremented())
     setTimeout(() => {
+      console.log('d99')
       dispatch(actionSet(lastValue))
-    }, 1000)
+    }, 500)
   }
 }
 
