@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware } from 'redux'
-import thunk from 'redux-thunk'
+import thunkMiddleware from 'redux-thunk'
 import CounterReducer from './reducer.mjs'
 
-const store = createStore(CounterReducer, applyMiddleware(thunk))
+const store = createStore(CounterReducer, applyMiddleware(thunkMiddleware.default))
 
 export default store

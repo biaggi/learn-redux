@@ -16,11 +16,28 @@ const actionReset = () => {
   }
 }
 
-const actionSet = (value) => {
+const actionSet = value => {
   return {
     type: '@action/set',
     payload: value
   }
 }
 
-export { actionIncremented, actionDecremented, actionReset, actionSet }
+const actionDeferred = lastValue => {
+  return dispatch => {
+    dispatch(actionIncremented())
+    dispatch(actionIncremented())
+    dispatch(actionIncremented())
+    setTimeout(() => {
+      dispatch(actionSet(lastValue))
+    }, 1000)
+  }
+}
+
+export {
+  actionIncremented,
+  actionDecremented,
+  actionReset,
+  actionSet,
+  actionDeferred
+}
