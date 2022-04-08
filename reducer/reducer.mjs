@@ -1,7 +1,7 @@
 const initialState = 0
 const CounterReducer = (state = initialState, action) => {
   const { type, payload } = action
-  console.log(type, payload)
+
   switch (type) {
     case '@action/incremented':
       return state + 1

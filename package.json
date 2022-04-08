@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/**/*test.js"
+    "test": "mocha test/**/*test.mjs"
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "mocha": "^9.2.2",
-    "redux": "^4.1.2"
+    "redux": "^4.1.2",
+    "redux-thunk": "^2.4.1"
   }
 }

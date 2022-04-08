@@ -1,17 +1,26 @@
-const actionIncremented = {
-  type: '@action/incremented'
+const actionIncremented = () => {
+  return {
+    type: '@action/incremented'
+  }
 }
 
-const actionDecremented = {
-  type: '@action/decremented'
+const actionDecremented = () => {
+  return {
+    type: '@action/decremented'
+  }
 }
 
-const actionReset = {
-  type: '@action/reset'
+const actionReset = () => {
+  return {
+    type: '@action/reset'
+  }
 }
 
-const actionSet = {
-  type: '@action/set'
+const actionSet = (value) => {
+  return {
+    type: '@action/set',
+    payload: value
+  }
 }
 
 export { actionIncremented, actionDecremented, actionReset, actionSet }
